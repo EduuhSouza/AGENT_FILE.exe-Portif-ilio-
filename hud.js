@@ -21,11 +21,11 @@ window.renderHUD = function () {
         </span>
 
         <span class="system-info">
-          USER: <strong>GUEST_OMEGA</strong>
+          USER: <strong>GUEST_ROOT</strong>
         </span>
 
         <span class="system-info">
-          SECURITY LVL: <strong>OMEGA</strong>
+          SECURITY LVL: <strong>ROOT</strong>
         </span>
 
         <span class="system-info">
@@ -60,8 +60,8 @@ window.renderHUD = function () {
           HARDWARE
         </button>
 
-        <button class="nav-item" data-tab="drone">
-          DRONE
+        <button class="nav-item" data-tab="arquivos">
+          ARQUIVOS
         </button>
 
         <button class="nav-item" data-tab="logs">
@@ -319,10 +319,13 @@ case "agente":
 
           <div class="agent-text">
 
-            Apaixonada por tecnologia, hardware,
-            programação web e infraestrutura.
-            Sempre buscando aprender coisas novas
-            e evoluir minhas habilidades.
+            Além da tecnologia, também gosto muito de design e da parte criativa/visual das coisas. Tenho quatro cachorras, uma irmã gêmea e sempre curti preto e vermelho, cores que inspiraram toda a estética do projeto.
+<br>
+            No tempo livre gosto de jogar e ficar com a família. Meus jogos favoritos são Resident Evil, Wolfenstein, Red Dead Redemption Online, GTA Online e Minecraft.
+<br>
+            Em 2024 comecei minha jornada na Programação Web Full Stack, experiência que aumentou ainda mais meu interesse por tecnologia. Hoje sigo evoluindo em hardware, suporte, manutenção e redes, sempre buscando aprender algo novo.
+<br>
+            Sou uma pessoa calma, focada e gosto de ambientes mais silenciosos para trabalhar.
 
           </div>
 
@@ -454,7 +457,7 @@ case "agente":
 </div>
   `;
       // ABA 
-    case "drone":
+    case "arquivos":
       return `<div class="tab-content"><h1>DRONE SYSTEM</h1></div>
       <div class="tech-bg-grid"></div>
       `;
