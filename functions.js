@@ -36,8 +36,10 @@ function renderSkillRow(name, percent, rank, subSkills) {
 function initHUD() {
 
   const tabs = document.querySelectorAll(".nav-item, .mobile-nav-item");
-
   const content = document.getElementById("hud-content");
+
+  // inicia botão da aba agente
+  initAgentLock();
 
   tabs.forEach(tab => {
 
@@ -55,17 +57,20 @@ function initHUD() {
         .querySelectorAll(".mobile-nav-item")
         .forEach(t => t.classList.remove("active"));
 
-      // ativa todos iguais
+      // ativa botão correspondente
       document
         .querySelectorAll(`[data-tab="${target}"]`)
         .forEach(t => t.classList.add("active"));
 
+      // renderiza conteúdo
       content.innerHTML = renderTab(target);
 
+      // reinicia eventos da aba agente
+      if (target === "agente") {
+        initAgentLock();
+      }
     });
-
   });
-
 }
 
 

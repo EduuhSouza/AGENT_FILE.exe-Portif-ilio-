@@ -65,6 +65,10 @@ body {
   display: none;
 }
 
+.mobile-hud-nav::before{
+  pointer-events:none;
+}
+
 /* ROOT*/
 
 .hud-root{
@@ -979,6 +983,7 @@ display:grid;
   outline: transparent;
   position: relative;
   cursor: pointer;
+
 }
 
 .decode-btn::after{
@@ -1154,7 +1159,7 @@ display:grid;
 
 /* RESPONSIVO */
 
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
 
   .agent-main-grid {
     grid-template-columns: 1fr;
@@ -1171,7 +1176,7 @@ display:grid;
   .decode-btn {
     min-width: 100%;
   }
-}
+} */
 
 /* FORMATAÇÃO ABA LOGS */
 .logs-root{
