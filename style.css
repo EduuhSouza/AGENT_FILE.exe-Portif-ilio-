@@ -60,6 +60,11 @@ body {
 
 
 /* HEADER */
+/* HUD MOBILE */
+.mobile-hud-nav{
+  display: none;
+}
+
 /* ROOT*/
 
 .hud-root{

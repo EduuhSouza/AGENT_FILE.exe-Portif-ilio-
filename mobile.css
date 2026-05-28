@@ -1,0 +1,695 @@
+
+/* MOBILE RESPONSIVO */
+
+@media (max-width: 768px){
+
+  html{
+    font-size: 13px;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /*  ROOT*/
+
+  .hud-root{
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 7rem;
+  }
+
+  .hud-content{
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 8rem;
+  }
+
+  /* INTRO*/
+
+  .screen{
+    padding: 1rem;
+  }
+
+  .terminal{
+    font-size: .72rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* TOP SYSTEM BAR */
+
+  .system-bar{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .system-left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+  }
+
+  .system-logo-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+  }
+
+  .system-logo{
+    font-size: .9rem;
+    letter-spacing: .12em;
+  }
+
+  .system-version{
+    font-size: .65rem;
+    letter-spacing: .12em;
+  }
+
+  .system-stats{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: .6rem;
+  }
+
+ .system-pill{
+  height:32px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid rgba(255,42,42,.2);
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(255,0,0,.08),
+    rgba(0,0,0,.2)
+  );
+  color:rgba(255,255,255,.7);
+  font-size:.72rem;
+  letter-spacing:1px;
+}
+
+
+.system-pill strong{
+  color:#ff3b3b;
+}
+
+.system-pill.online{
+  color:#c8ff75;
+}
+
+  .system-actions{
+    display: none;
+  }
+
+  .live-dot{
+     width:8px; 
+     height:8px; 
+     border-radius:50%; 
+     background:#c8ff75; 
+     box-shadow: 0 0 10px #c8ff75, 0 0 20px #c8ff75; 
+     animation:livePulse 1.4s 
+     infinite; }
+     
+     @keyframes livePulse{ 
+      0%{ opacity:.4; transform:scale(.8); } 
+      50%{ opacity:1; transform:scale(1); } 
+      100%{ opacity:.4; transform:scale(.8); } 
+    }
+
+  /* REMOVE NAV DESKTOP*/
+
+  .hud-header{
+    display: none;
+  }
+
+  /* MOBILE HUD NAV */
+  .mobile-hud-nav{
+    position: fixed;
+    left: 50%;
+    bottom: .8rem;
+    transform: translateX(-50%);
+    width: calc(100% - 1rem);
+    max-width: 32rem;
+    height: 4.8rem;
+    padding: .6rem;
+  display:flex !important;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255,42,42,.15);
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(20,20,20,.96),
+        rgba(0,0,0,.96)
+      );
+    backdrop-filter: blur(18px);
+    border-radius: 1.5rem;
+    z-index: 9999;
+    box-shadow:
+      0 0 25px rgba(255,0,0,.08),
+      inset 0 0 20px rgba(255,0,0,.05);
+  }
+
+  .mobile-hud-nav::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,42,42,.5),
+        transparent
+      );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .mobile-nav-item{
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    position: relative;
+    color: rgba(255,255,255,.45);
+    cursor: pointer;
+    transition: .25s;
+  }
+
+  .mobile-nav-item.active{
+    color: #ff3a3a;
+  }
+
+  .mobile-nav-item.active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: .18rem;
+    border-radius: 10rem;
+    background: #ff2a2a;
+    box-shadow: 0 0 12px #ff2a2a;
+  }
+
+  .mobile-icon{
+    font-size: 1rem;
+  }
+
+  .mobile-label{
+    font-size: .52rem;
+    letter-spacing: .12em;
+  }
+
+  /* =========================================
+     SISTEMA / SKILLS
+  ========================================= */
+
+  .skills-container{
+    width: 100%;
+
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .system-summary{
+
+    display: flex;
+    flex-direction: column;
+
+    gap: .5rem;
+
+    font-size: .72rem;
+  }
+
+  .skill-row{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .skill-name{
+    font-size: 1rem;
+  }
+
+  .skill-modules{
+    gap: .45rem;
+  }
+
+  .module-tag{
+    font-size: .58rem;
+  }
+
+  .skill-progress-focus{
+    width: 100%;
+
+    flex: unset;
+
+    align-items: flex-start;
+  }
+
+  .progress-info{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: .7rem;
+  }
+
+  .percent-val{
+    font-size: 2rem;
+  }
+
+  .bar-container{
+    width: 100%;
+  }
+
+  /* =========================================
+     HARDWARE
+  ========================================= */
+
+  .hardware-tech-root{
+
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding:
+      4rem
+      1rem
+      8rem;
+  }
+
+  .hw-tech-header{
+
+    position: relative;
+
+    top: unset;
+    left: unset;
+
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  .glitch-box{
+    font-size: .8rem;
+    padding: .6rem 1rem;
+  }
+
+  .hw-core-wrapper{
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .central-hex{
+
+    position: relative;
+
+    top: unset;
+    left: unset;
+
+    transform: none;
+
+    margin: 0 auto;
+
+    width: 8rem;
+    height: 8rem;
+
+    font-size: .9rem;
+  }
+
+  .hw-node{
+
+    position: relative !important;
+
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+
+    transform: none !important;
+
+    width: 100%;
+  }
+
+  .node-value-bar{
+    width: 100%;
+  }
+
+  .node-number{
+    font-size: 1.1rem;
+  }
+
+  .hw-side-panel{
+
+    position: relative;
+
+    top: unset;
+    right: unset;
+
+    transform: none;
+
+    width: 100%;
+
+    margin-top: 2rem;
+
+    text-align: left;
+
+    border-right: none;
+    border-left: 2px solid var(--red-main);
+
+    padding-left: 1rem;
+  }
+
+  /* =========================================
+     AGENTE
+  ========================================= */
+
+  .agent-screen{
+
+    width: 100%;
+
+    padding:
+      1rem
+      1rem
+      8rem;
+
+    overflow-x: hidden;
+  }
+
+  .agent-main-grid{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .agent-card{
+    width: 100%;
+    padding: .8rem;
+  }
+
+  .agent-image-box{
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1.15;
+
+    max-height: 28rem;
+  }
+
+  .agent-photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .agent-info-panel{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding-top: 0;
+  }
+
+  .agent-info-line{
+    gap: .3rem;
+  }
+
+  .agent-info-line span{
+
+    font-size: .65rem;
+    letter-spacing: .12em;
+
+    word-break: break-word;
+  }
+
+  .agent-info-line strong{
+
+    font-size: .95rem;
+    line-height: 1.5;
+
+    letter-spacing: .08em;
+
+    word-break: break-word;
+  }
+
+  .status-wrapper{
+    gap: .8rem;
+    flex-wrap: wrap;
+  }
+
+  .status-dot{
+    width: 10px;
+    height: 10px;
+  }
+
+  .agent-data-panel{
+
+    width: 100%;
+
+    padding: 1rem;
+
+    gap: 1rem;
+  }
+
+  .panel-top{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: .5rem;
+  }
+
+  .panel-title,
+  .encrypted-status{
+
+    font-size: .72rem;
+    letter-spacing: .12em;
+  }
+
+  .agent-text{
+
+    width: 100%;
+
+    font-size: .82rem;
+    line-height: 1.7;
+
+    word-break: break-word;
+  }
+
+  .skills-section h3,
+  .status-section h3{
+
+    font-size: .9rem;
+    letter-spacing: .12em;
+
+    margin-bottom: 1rem;
+  }
+
+  .skill-grid{
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: .6rem;
+  }
+
+  .skill-grid span{
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: .7rem .5rem;
+
+    font-size: .65rem;
+    letter-spacing: .08em;
+  }
+
+  .status-progress{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: .8rem;
+  }
+
+  .status-progress strong{
+    font-size: 1rem;
+  }
+
+  .progress-bar{
+    width: 100%;
+  }
+
+  .agent-action{
+    width: 100%;
+  }
+
+  .decode-btn,
+  .decode-btn::after{
+
+    width: 100%;
+
+    height: 3.8rem;
+    line-height: 3.8rem;
+
+    font-size: .8rem;
+    letter-spacing: .12em;
+
+    box-shadow: 4px 0 0 var(--green-neon);
+  }
+
+  /* =========================================
+     MODAL
+  ========================================= */
+
+  .decode-window{
+    width: 95%;
+  }
+
+  .decode-header{
+
+    padding: 0 1rem;
+
+    font-size: .75rem;
+    letter-spacing: .12em;
+  }
+
+  .decode-body{
+    padding: 1rem;
+  }
+
+  .terminal-input{
+    padding: 0 .8rem;
+  }
+
+  .terminal-input input{
+    font-size: .85rem;
+  }
+
+  #unlock-btn{
+    height: 3.2rem;
+    font-size: .75rem;
+  }
+
+  /* =========================================
+     LOGS
+  ========================================= */
+
+  .logs-root{
+    gap: 1.5rem;
+    padding-bottom: 7rem;
+  }
+
+  .logs-header{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .logs-title{
+    font-size: 1rem;
+  }
+
+  .logs-status{
+    font-size: .72rem;
+  }
+
+  .logs-container{
+    grid-template-columns: 1fr;
+  }
+
+  .log-card{
+    padding: 1rem;
+  }
+
+  .log-card h2{
+    font-size: .95rem;
+  }
+
+  .log-card p{
+    font-size: .82rem;
+  }
+
+  .log-footer{
+    font-size: .7rem;
+  }
+
+  /* =========================================
+     FOOTER
+  ========================================= */
+
+  .hud-footer{
+    padding: 1rem;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: .12em;
+  }
+
+}

@@ -35,27 +35,37 @@ function renderSkillRow(name, percent, rank, subSkills) {
 // INIT HUD
 function initHUD() {
 
-  const tabs = document.querySelectorAll(".nav-item");
-  const content = document.getElementById("hud-content");
+  const tabs = document.querySelectorAll(".nav-item, .mobile-nav-item");
 
-  initAgentLock();
+  const content = document.getElementById("hud-content");
 
   tabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
 
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-
       const target = tab.dataset.tab;
+
+      // remove active desktop
+      document
+        .querySelectorAll(".nav-item")
+        .forEach(t => t.classList.remove("active"));
+
+      // remove active mobile
+      document
+        .querySelectorAll(".mobile-nav-item")
+        .forEach(t => t.classList.remove("active"));
+
+      // ativa todos iguais
+      document
+        .querySelectorAll(`[data-tab="${target}"]`)
+        .forEach(t => t.classList.add("active"));
 
       content.innerHTML = renderTab(target);
 
-      if (target === "agente") {
-        initAgentLock();
-      }
     });
+
   });
+
 }
 
 

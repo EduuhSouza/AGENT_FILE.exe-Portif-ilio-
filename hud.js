@@ -45,7 +45,6 @@ window.renderHUD = function () {
 
     <!-- NAVIGATION -->
     <header class="hud-header">
-
       <nav class="hud-nav">
 
         <button class="nav-item active" data-tab="agente">
@@ -69,10 +68,72 @@ window.renderHUD = function () {
         </button>
 
       </nav>
-
-      <!-- OBJECTIVE BOX -->
-     
       </div>
+
+     <!-- MOBILE HUD -->
+<nav class="mobile-hud-nav">
+
+    <button class="mobile-nav-item active" data-tab="agente">
+
+      <span class="mobile-icon">
+        ◉
+      </span>
+
+      <span class="mobile-label">
+        AGENTE
+      </span>
+
+    </button>
+
+    <button class="mobile-nav-item" data-tab="sistema">
+
+      <span class="mobile-icon">
+        ⌘
+      </span>
+
+      <span class="mobile-label">
+        SISTEMA
+      </span>
+
+    </button>
+
+    <button class="mobile-nav-item" data-tab="hardware">
+
+      <span class="mobile-icon">
+        ⬢
+      </span>
+
+      <span class="mobile-label">
+        HARDWARE
+      </span>
+
+    </button>
+
+    <button class="mobile-nav-item" data-tab="arquivos">
+
+      <span class="mobile-icon">
+        ▣
+      </span>
+
+      <span class="mobile-label">
+        FILES
+      </span>
+
+    </button>
+
+    <button class="mobile-nav-item" data-tab="logs">
+
+      <span class="mobile-icon">
+        ⌬
+      </span>
+
+      <span class="mobile-label">
+        LOGS
+      </span>
+
+    </button>
+
+  </nav>
     </header>
 
       <div class="hud-content" id="hud-content">
